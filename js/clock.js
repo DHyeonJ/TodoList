@@ -14,7 +14,7 @@ function getDate() {
   const todayDate = new Date();
   const dateArray = ['일','월','화','수','목','금','토'];
   const year = String(todayDate.getFullYear()).padStart(4, "0");
-  const month = String(todayDate.getMonth() + 1).padStart(2, "0");
+  const month = String(todayDate.getMonth() + 1).padStart(2, "0"); // 날짜는 인덱스가 0부터 시작되므로 +1을 해야한다.
   const date = String(todayDate.getDate()).padStart(2, "0");
   const day = dateArray[todayDate.getDay()];
   today.innerText =` ${year}.${month}.${date} (${day})`;
