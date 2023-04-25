@@ -8,27 +8,24 @@ body {
     height: 100%;
     margin: 0;
     padding: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
 }
 
 .hidden {
     display: none;
 }
 
-/* 날씨 */
 
-#weather {
+/* 배경 이미지 */
+img {
     position: absolute;
-    top: 0;
-    right: 10px;
-    text-align: right;
-    color: black;
-    font-size: 30px;
-    font-weight: bold;
     width: 100vw;
+    height: 100vh;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    opacity: 0.6;
+    z-index: -1;
+    background-size: cover;
 }
 
 .main {
@@ -41,9 +38,19 @@ body {
     height: 70vh;
 }
 
+/* 날씨 */
+#weather {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    text-align: right;
+    color: black;
+    font-size: 30px;
+    font-weight: bold;
+    width: 100vw;
+}
 /* 요일 */
 #day {
-
     color: black;
     text-align: center;
     font-size: 50px;
@@ -58,14 +65,6 @@ body {
     font-size: 95px;
     font-weight: bold;
 }
-
-.data {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
 /* 로그인 폼 */
 #login-form {
     text-align: center;
@@ -89,7 +88,6 @@ body {
 
 /* 로그인 후 Hello username*/
 #greeting {
-
     font-size: 50px;
     text-align: center;
 }
@@ -125,6 +123,7 @@ body {
     overflow-y: scroll;
 }
 
+/*스크롤바 설정*/
 #todo-list::-webkit-scrollbar {
     width: 5px;  /* 스크롤바의 너비 */
 }
@@ -139,35 +138,16 @@ body {
     background: rgba(33, 122, 244, .1);  /*스크롤바 뒷 배경 색상*/
 }
 
+/*리스트 설정*/
 li {
     flex-wrap: wrap;
-    margin: 5px 15px;
-    list-style: none;
+    margin: 0 15px;
 }
-
 /* 명언 */
 #quote {
     position: absolute;
     bottom: 20px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     color: black;
     font-size: 20px;
     font-weight: bold;
-}
-
-/* 배경 이미지 */
-
-img {
-    position: absolute;
-    width: 100vw;
-    height: 100vh;
-    top: 0px;
-    right: 0px;
-    bottom: 0px;
-    opacity: 0.6;
-    z-index: -1;
-    background-size: cover;
 }
