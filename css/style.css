@@ -1,7 +1,7 @@
-* {
+/* * {
     margin: 0;
     padding: 0;
-}
+} */
 
 body {
     width: 100%;
@@ -29,19 +29,19 @@ img {
 }
 
 .main {
-    margin-top: 80px;
+    margin-top: 50px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100vw;
-    height: 70vh;
+    height: 90vh;
 }
 
 /* 날씨 */
 #weather {
     position: absolute;
-    top: 0;
+    top: 10px;
     right: 10px;
     text-align: right;
     color: black;
@@ -104,12 +104,12 @@ img {
 
 /* 입력된 todo lis*/
 #todo-list {
-    width: 90vw;
-    height: 70vh;
+    width: 25vw;
+    height: 40vh;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-content: flex-start;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    /* align-content: flex-start; */
     /* 
        align-items는 flex-container 안에서 전체 item의 배치를 어떻게 할 것이냐에 대한 속성
        align-content는 flex-container에서 item의 줄 간격을 어떻게 배치할 것이냐에 대한 속성 
@@ -119,17 +119,16 @@ img {
 
     font-size: 20px;
     font-weight: bold;
-    text-align: center;
-    overflow-y: scroll;
+    overflow-x: scroll;
 }
 
 /*스크롤바 설정*/
 #todo-list::-webkit-scrollbar {
     width: 5px;  /* 스크롤바의 너비 */
+    height: 5px; /* 스크롤바의 길이 */
 }
 
 #todo-list::-webkit-scrollbar-thumb { /*적용한 영역의 스크롤 길이가 짧아 높이가 조절이 안될 수 있습니다.*/
-    height: 20px; /* 스크롤바의 길이 */ 
     background: #69b6e2; /* 스크롤바의 색상 */
     border-radius: 10px;
 }
@@ -141,13 +140,26 @@ img {
 /*리스트 설정*/
 li {
     flex-wrap: wrap;
-    margin: 0 15px;
+    margin: 5px 5px;
+    list-style-type: decimal; /* li 기본 속성이 점인데 숫자로 된 목록으로 변경한다는 의미입니다.*/
+    /*
+     * 여러가지 속성이 있다.
+     * { list-style-type : lower-roman } -- 로마숫자 소문자으로된 목록
+     * { list-style-type : upper-roman } -- 로마숫자 대문자으로된 목록
+     * { list-style-type : lower-alpha } -- 알파벳 소문자으로된 목록
+     * { list-style-type : upper-alpha } -- 알파벳 대문자으로된 목록 
+     * { list-style-type : disc } -- 점으로 된 목록 
+     * { list-style-type : circle } -- 속이 하얀색 원으로 된 목록 
+     * { list-style-type : square } -- 사각형으로 된 목록 
+     * { list-style-type : none } -- 아무 표시 없음
+    */
 }
 /* 명언 */
 #quote {
     position: absolute;
-    bottom: 20px;
+    bottom: 10px;
     color: black;
     font-size: 20px;
+    margin: -25px 0 0 -25px;
     font-weight: bold;
 }
